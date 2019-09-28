@@ -74,6 +74,7 @@ class Game {
                     data.elt.children[0].remove()
                 }
             })
+            
             let dat = this.savesArr.pop();
             this.grid.forEach((data1, i) => {
                 data1.forEach((data, i1) => {
