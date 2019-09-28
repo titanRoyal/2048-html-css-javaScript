@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>first_backend_frontend</title>
+	<link rel="stylesheet" href="master.css">
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="2048.js"></script>
+	<script src="sketch.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+
+<body>
+	<div class="cont">
+		<div class="gameOver">
+			<h1>Ooops!! game over</h1><button class="restart">Restart Game</button>
+		</div>
+		<div class="gameWon">
+			<h1>Congratulation ! you win</h1>
+			<button class="continueGame">Continue</button>
+			<button class="restartW">Restart Game</button>
+		</div>
+		<div class="row">
+			<div id="0_0"></div>
+			<div id="0_1"></div>
+			<div id="0_2"></div>
+			<div id="0_3"></div>
+		</div>
+		<div class="row">
+			<div id="1_0"></div>
+			<div id="1_1"></div>
+			<div id="1_2"></div>
+			<div id="1_3"></div>
+		</div>
+		<div class="row">
+			<div id="2_0"></div>
+			<div id="2_1"></div>
+			<div id="2_2"></div>
+			<div id="2_3"></div>
+		</div>
+		<div class="row">
+			<div id="3_0"></div>
+			<div id="3_1"></div>
+			<div id="3_2"></div>
+			<div id="3_3"></div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+$ang:30deg;
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    // background: #515151;
+}
+.gameWon button{
+    margin-bottom: 5%;
+}
+.gameOver,.gameWon{
+ position: absolute;
+ top: -100%;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(255, 255, 255, 0.911);  
+ z-index:2;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center; 
+ font-family: poppins light;
+ color:#626262;
+ opacity: 0;
+ transition: 1s .5s;
+ h1{
+     font-size: 3em;
+     margin-bottom: 30%;
+     margin-top: -5%;
+ }
+ button{
+    border-radius: 20px;
+    border:none;
+    width: 30%;
+    height: 10%;
+    font-size: 1.5em;
+ }
+}
+.cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95vh;
+    height: 95vh;
+    background: linear-gradient(45deg,red ,yellow );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+
+    .row {
+        position: relative;
+        width: 95%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            position: relative;
+            height: 100%;
+            width: 22%;
+            border-radius: 20px;
+            background-color: white;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            div {
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                color: white;
+                font-size: 3.5em;
+                font-family: poppins light;
+                box-shadow: 0 0 50px 10px black;
+                transition: .5s;
+
+            }
+        }
+    }
+
+}
+
+@keyframes shiftup {
+    0% {
+        bottom: -10%;
+    }
+
+    100% {
+        bottom: 5%;
+    }
+}
+
+@keyframes shiftdown {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 5%;
+    }
+}
+
+@keyframes shiftleft {
+    0% {
+        right: -10%;
+    }
+
+    100% {
+        right: 5%;
+    }
+}
+
+@keyframes shiftright {
+    0% {
+        left: -10%;
+    }
+
+    100% {
+        left: 5%;
+    }
+}
+
+@keyframes Tile {
+    0% {
+        transform: rotateZ(0deg)
+    }
+
+
+    20% {
+        transform: rotateZ($ang)
+    }
+
+
+    40% {
+        transform: rotateZ(-$ang)
+    }
+
+
+    60% {
+        transform: rotateZ($ang)
+    }
+
+    80% {
+        transform: rotateZ(-$ang)
+    }
+
+
+    100% {
+        transform: rotateZ(0deg)
+    }
+}
+
+@keyframes newTile {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(3)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
